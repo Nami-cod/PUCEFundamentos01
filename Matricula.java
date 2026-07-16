@@ -41,7 +41,7 @@ void main() {
             case "true" -> {
                 if (notaPrerrequisito >= 7.0) {
                     if (notaPrerrequisito == 10.0) {
-                        yield "FELICIDADES ha sido seleccionad@.\nMATRICULA APROBADA: cumple con el prerrequisito con notav perfecta!!";
+                        yield "FELICIDADES ha sido seleccionad@ como tutor de programacion del PUCE TEC.\nMATRICULA APROBADA: cumple con el prerrequisito con notav perfecta!!";
                     } else {
                         yield "MATRÍCULA APROBADA: cumple con el prerrequisito con nota" + notaPrerrequisito;
                     }
