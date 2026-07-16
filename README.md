@@ -1,32 +1,59 @@
 # PUCEFundamentos01
 ## 🚀 Taller Autónomo - Operación Código Legacy
 
-Bienvenidos a su primer reto de mantenimiento de software. En el mundo real, rara vez crearán sistemas desde cero; la mayor parte del tiempo heredarán código escrito por otras personas, a menudo sin documentación, con nombres confusos y errores ocultos.
+**Integrantes:**
+*Naomi Jurado
+*Odalis Bonilla
 
-Hoy asumen el rol de **Analistas de Desarrollo**. El departamento de TI del PUCE TEC les ha entregado el módulo beta de validación de matrículas escrito en Java 25. El programador anterior fue reasignado y dejó el trabajo a medias.
+# FASE 1 INGENIERIA INVERSA - EXPLICACIÓN
 
-El sistema compila, pero tiene fallos estructurales graves. Su objetivo es entenderlo, arreglarlo y mejorarlo.
+## 1. ¿Qué problema resuelve esta aplicación?
 
----
+Es un simulador de matriculas particularmente de la Tecnologia en Desarrollo De software.
+Esta aplicación tiene como objetivo evaluar si un estudiante puede matricularse o no en la materia 'Estructura de datos', basandose en la verificación del requisito previo (es obligatorio hacer cursado y aprobado la materia 'Fundamentos de Programación' con una nota mínima de 7.0) para acceder a esta materia. 
 
-### Misión de la Semana (Trabajo en Grupos)
+## 2. Descripción del flujo de datos
 
-### Fase 1: Ingeniería Inversa
-* **Clonen** este repositorio y creen una rama (`branch`) con el nombre de su grupo.
-* **Lean** el código línea por línea. Usen herramientas de IA si lo necesitan, pero *solo para entender*, no para reescribir.
-* **Expliquen** en el archivo `README.md` de forma clara y objetiva qué problema resuelve esta aplicación y describan el flujo de datos.
+A continuación se describe el como opera el sistema de matrícula.
 
-### Fase 2: Refactorización y Debugging
-* **Nombres vagos:** El código está lleno de variables como `usr`, `m1`, `n1`, `p1`. Renómbrenlas usando las buenas prácticas de la industria para que el código sea legible.
-* **El Bug Oculto:** Si ejecutan el programa y registran a un estudiante nuevo (que no es de reingreso), el sistema colapsa abruptamente al evaluar la materia destino. Encuentren la línea exacta que causa la excepción, entiendan por qué ocurre lógicamente y apliquen la solución en el código.
+### Ingreso de Datos Iniciales (Inputs)
+El programa solicita:
+  *Nombre del estudiante ('urs')*
+  *¿Es estudiante de reingreso o arrastre? ('s/n')*
 
-### Fase 3: Nueva Funcionalidad (Requerimiento del Cliente)
-Dirección Académica ha solicitado un cambio urgente en la regla de negocio:
+ ### Historial de Respuestas
+ *- Si el estudiante responde Sí ('S'):* el programa asume que ya se ha cursado materias anteriormente.
+ Lo que resgistra en su historial ('h_materias') la materia de 'Fundamentos de Programación'.
+ Inmediatamente, imprime un mensaje donde solicita ingresar la nota final obtenida de la materia ('n1'); la nota se convierte en un valor numerio decimal ('double').
 
-> Si un estudiante aprueba el prerrequisito con una calificación perfecta de **10.0**, el sistema no solo debe aprobar la matrícula, sino imprimir el siguiente mensaje destacado: *"¡Felicidades! Ha sido seleccionado como Tutor de Programación del PUCE TEC para este semestre."*
+ *- Si el estudiante responde No ('N'):* el programa asume que el estudiante es de nuevo ingreso, de primer sementre, y se salta el input de la nota final.
 
----
+### Solicitud de Cupo
+El programa pregunta: 
+ *¿Desea solicitar el cupo para esta materia? ('s/n')*
+ ### Historial de Respuestas
+ *- Si el estudiante responde Sí ('S'):* el programa evalua si cumple con los requisitos para proporcionar el cupo.
 
-### Entregables Finales
-* **Pull Request:** Suban sus cambios a GitHub y abran un *Pull Request* hacia el repositorio original. Se evaluará el historial de commits para validar el trabajo en equipo.
-* **Video de Defensa Técnica (Máximo 3 minutos):** Incluyan el enlace al video en la descripción de su Pull Request. En la grabación deben demostrar la aplicación funcionando sin errores en la terminal, explicar dónde estaba el error oculto y cómo lo solucionaron, y mostrar el código refactorizado con la nueva funcionalidad implementada.
+ *- Si el estudiante responde No ('N'):* el programa imprime un mensaje de despedida: "Proceso finalizado. No se solicitaron materias de segundo nivel" y por último, se cierra el sistema de matrícula.
+
+## 3. Resumen 
+El sistema evalua tres posibles resultados o escenarios: 
+
+  *Matrícula Aprobada:* Si el estudiante es de reingreso ('S') y registra una nota >= a 7.0 en "Fundamentos de Programación", cumple con el prerrequisito.
+
+  *Matrícula Rechazada por nota:* Si es de reingreso ('S') pero su nota < a 7.0, el sistema rechaza la solicitud por no alcanzar el puntaje mínimo.
+
+  *Matrícula Rechazada por falta de prerrequisito:* Si el estudiante es de nuevo ingreso ('N'), no tendrá la materia en su historial, lo que resulta con el rechazo de la matrícula por no contar con el prerrequisito.
+
+  *Nota de cierre:* Si el estudiante decide no solicitar el cupo (respondiendo "N"), el sistema detiene el proceso de inmediato con el mensaje: "Proceso finalizado. No se solicitaron materias de segundo nivel."
+
+ 
+
+
+
+
+
+
+
+
+
