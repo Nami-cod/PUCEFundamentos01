@@ -10,7 +10,7 @@
 ## 1. ¿Qué problema resuelve esta aplicación?
 
 Es un simulador de matriculas particularmente de la Tecnologia en Desarrollo De software.
-Esta aplicación tiene como objetivo evaluar si un estudiante puede matricularse o no en la materia 'Estructura de datos', basandose en la verificación del requisito previo (es obligatorio hacer cursado y aprobado la materia 'Fundamentos de Programación' con una nota mínima de 7.0) para acceder a esta materia. 
+Esta aplicación tiene como objetivo evaluar si un estudiante puede matricularse o no en la materia 'Estructura de datos', basandose en la verificación del requisito previo (es obligatorio haber cursado y aprobado la materia 'Fundamentos de Programación' con una nota mínima de 7.0) para acceder a esta materia. 
 
 ## 2. Descripción del flujo de datos
 
