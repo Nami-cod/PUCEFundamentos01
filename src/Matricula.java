@@ -10,7 +10,6 @@ public class Matricula {
         System.out.println(peticion);
         return scanner.nextLine();
     }
-
     public static void main(String[] args) {
 
         println("""
@@ -53,10 +52,9 @@ public class Matricula {
 
                 String resultadoMatricula = switch (String.valueOf(cumplePrerrequisito)) {
                     case "true" -> {
-                        if (notaPrerrequisito >= 7.0) {
-                            if (notaPrerrequisito == 10.0) {
+                        if (notaPrerrequisito >= 10.0) {
                                 yield "FELICIDADES ha sido seleccionad@ como tutor de programacion del PUCE TEC.\nMATRICULA APROBADA: cumple con el prerrequisito con notav perfecta!!";
-                            } else {
+                            } else if (notaPrerrequisito >= 7.0 ){
                                 yield "MATRÍCULA APROBADA: cumple con el prerrequisito con nota" + notaPrerrequisito;
                             }
                         } else {

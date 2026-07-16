@@ -35,7 +35,7 @@ El programa pregunta:
  *- Si el estudiante responde Sí ('S'):* el programa evalua si cumple con los requisitos para proporcionar el cupo.
 
  *- Si el estudiante responde No ('N'):* el programa imprime un mensaje de despedida: "Proceso finalizado. No se solicitaron materias de segundo nivel" y por último, se cierra el sistema de matrícula.
-
+  
 ## 3. Resumen 
 El sistema evalua tres posibles resultados o escenarios: 
 
@@ -47,7 +47,10 @@ El sistema evalua tres posibles resultados o escenarios:
 
   *Nota de cierre:* Si el estudiante decide no solicitar el cupo (respondiendo "N"), el sistema detiene el proceso de inmediato con el mensaje: "Proceso finalizado. No se solicitaron materias de segundo nivel."
 
- 
+### 4. Funcionalidad extra 
+ Se implemento una nueva regla: 
+ Si el estudiante obtiene nota perfecta de 10.0 en el prerrequisito, el sistema aprueba la matricula y adicionalmemte muestra :
+ "FELICIDADES ha sido seleccionad@ como tutor de programacion del PUCE TEC.\nMATRICULA APROBADA: cumple con el prerrequisito con notav perfecta!!"
 
 
 
